@@ -80,7 +80,6 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
    0.00000   2.50000
   ```
   
-  
 **Nous voilà maintenant avec nos deux matrices L et U qui vont nous permettre de résoudre ce système**
 
 ## Descente 
@@ -181,6 +180,68 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
     0.60000
    -0.20000
   ```
+  
+# Obtenir la matrice inverse avec la factorisation LU
+Le but est d'obtenir la matrice inverse de A
+On rapelle A :
+```matlab
+  A = [2 1;1 3];
+``` 
+On va donc utiliser cette fonction
+```matlab
+  function invA=myinv(A)
+    [n,m] = size(A);
+    [L,U] = mylu(A);
+    for j=1:n
+      b=zeros(n);
+      b(j)=1;
+      y=descente(L,b);
+      invA(:,j)=remontee(U,y);
+    end
+  end
+```
+- ## Explication des lignes
+  - n et m prennent la taille de la matrice A
+  ```matlab
+    [n,m] = size(A);
+  ```
+  - on récupère les matrices L et U par la fonction mylu vu au dessus
+  ```matlab
+    [L,U] = mylu(A);
+  ```
+  - on va résoudre autant de système qu'il y a de lignes 
+  ```matlab
+    for j=1:n
+  ```
+  - Pour chaque système, on va créer une matrice b de taille n avec que des 0 et mettre un 1 à la ligne j de la matrice
+  ```matlab
+    b=zeros(n);
+    b(j)=1;
+  ```
+  - on résout le système avec nos fonctions et on stock le résultat dans la colonne j d'une matrice
+  ```matlab
+    y=descente(L,b);
+    invA(:,j)=remontee(U,y);
+  ```
+- ## Résultat
+  Matrice inverse de A 
+  ```bash
+    invA =
+
+       0.60000  -0.20000
+      -0.20000   0.40000
+  ```
+- ## Vérification
+  Utiliser la fonction de matlab pour vérifier le résultat
+  ```bash
+     invA = inv(A)
+     invA =
+
+       0.60000  -0.20000
+      -0.20000   0.40000
+  
+  ```
+  
   
 # Bon courage ;) 
 ### Réalisé par RAIMON Dylan
