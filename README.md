@@ -183,7 +183,7 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
   
 # Obtenir la matrice inverse avec la factorisation LU
 Le but est d'obtenir la matrice inverse de A
-On rapelle A :
+On rappelle A :
 ```matlab
   A = [2 1;1 3];
 ``` 
