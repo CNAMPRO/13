@@ -183,7 +183,7 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
   ```
   
 # Bon courage ;) 
-### Réalisé par Raimon Dylan
+### Réalisé par RAIMON Dylan
  
   
   
