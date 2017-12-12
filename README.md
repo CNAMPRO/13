@@ -218,7 +218,7 @@ On va donc utiliser cette fonction
     b=zeros(n);
     b(j)=1;
   ```
-  - on résout le système avec nos fonctions et on stocke le résultat dans la colonne j d'une matrice
+  - on résout le système avec nos fonctions et on stocke les résultats dans la colonne j d'une matrice
   ```matlab
     y=descente(L,b);
     invA(:,j)=remontee(U,y);
