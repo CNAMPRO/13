@@ -66,14 +66,14 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
   ```
 - ### Résultat 
   - Matrice triangulaire inférieur L
-  ```bash
+  ```Matlab
   L =
 
    1.00000   0.00000
    0.50000   1.00000
   ```
   - Matrice triangulaire supérieur U
-  ```bash
+  ```Matlab
   U =
 
    2.00000   1.00000
@@ -106,13 +106,13 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
   ```
 - ### Résultat 
   Matrice y 
-  ```bash
+  ```Matlab
   y =
 
    1.00000  -0.50000
   ```
   Ne pas oublier de l'inverser pour obtenir une matrice colonne  !
-  ```bash
+  ```Matlab
   y = y'
   y =
 
@@ -152,13 +152,13 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
   Nous voilà donc maintenant avec notre vecteur x qui est la solution du système Ax = b
 - ### Résultat 
   Matrice x 
-  ```bash
+  ```Matlab
   x =
 
    0.60000  -0.20000
   ```
   Ne pas oublier de l'inverser pour obtenir une matrice colonne  !
-  ```bash
+  ```Matlab
   x = x'
   x =
 
@@ -173,7 +173,7 @@ Et enfin se servir de la fonction remontée pour obtenir notre vecteur x
     A\b
   ```
   Resultat 
-  ```bash
+  ```Matlab
    x = A\b
    x =
 
@@ -225,7 +225,7 @@ On va donc utiliser cette fonction
   ```
 - ## Résultat
   Matrice inverse de A 
-  ```bash
+  ```Matlab
     invA =
 
        0.60000  -0.20000
@@ -233,7 +233,7 @@ On va donc utiliser cette fonction
   ```
 - ## Vérification
   Utiliser la fonction de matlab pour vérifier le résultat
-  ```bash
+  ```Matlab
      invA = inv(A)
      invA =
 
